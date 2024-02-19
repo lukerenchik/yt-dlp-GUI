@@ -1,0 +1,41 @@
+Scope of the Program
+
+This documentation outlines the functionality and usage of a Python-based application designed to download audio from YouTube videos as MP3 files. The application comprises two main scripts: downloader.py and ffmpeg.py. The downloader.py script is responsible for downloading the audio stream of a YouTube video in the best available quality and saving it as an M4A file. The ffmpeg.py script is then used to convert the downloaded M4A audio files into MP3 format.
+Short Description
+
+The program provides a graphical user interface (GUI) for easy interaction with the user. It leverages external tools (yt-dlp for downloading and ffmpeg for conversion) to process and convert YouTube videos into MP3 audio files. The application is designed for users who wish to save audio tracks from YouTube videos for offline listening in a commonly used audio format.
+Main Functions
+downloader.py
+
+    download_video: Downloads the audio from a specified YouTube URL as an M4A file using yt-dlp, saving it to a pre-defined or user-specified directory.
+    select_output_folder: Opens a dialog for the user to select a custom output directory for downloaded files.
+    GUI Components: Includes entry fields for YouTube URL input, a button to start the download, a button to select the output folder, and a label to display the current output path.
+
+ffmpeg.py
+
+    select_folder_and_convert: Allows the user to select a folder containing M4A files, then converts all M4A files in the folder to MP3 format using ffmpeg, maintaining high audio quality.
+    GUI Component: Provides a button to initiate the folder selection and conversion process.
+
+How to Use / Modify the Program
+Using the Program
+
+    Download Audio:
+        Run downloader.py to start the GUI.
+        Enter a YouTube URL in the provided entry field.
+        Click "Download MP3" to download the audio or "Select Output Folder" to change the destination folder before downloading.
+    Convert Downloaded Audio:
+        Run ffmpeg.py to open its GUI.
+        Click "Select Folder and Convert .m4a to .mp3" and select the folder containing the downloaded M4A files.
+        The script will automatically convert all M4A files to MP3 format.
+
+Modifying the Program
+
+    Changing Output Formats or Quality:
+        In downloader.py, modify the command list in download_video to change the format or quality of the downloaded audio.
+        In ffmpeg.py, adjust the command list in select_folder_and_convert to alter the output quality or parameters of the MP3 conversion.
+    Adding New Features:
+        Implement additional functionality by defining new functions and GUI components. For example, add support for downloading video files or batch processing of URLs.
+
+Note
+
+Ensure that yt-dlp and ffmpeg are installed and accessible in your system's PATH to use this application successfully. This program is intended for personal use and should respect YouTube's terms of service.
